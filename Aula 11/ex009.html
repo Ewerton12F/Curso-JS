@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Em que país nasceu? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="checar()">
+    <div id="che">
+
+    </div>
+    <script>
+        function checar() {
+            var txtn = document.getElementById('txtnac')
+            var che = document.getElementById('che')
+            var naci = String(txtn.value)
+            che.innerHTML = `<p>Você nasceu no país <strong>${naci}</strong>!</p>`
+            if (naci == 'Brasil') {
+                che.innerHTML += `Você é brasileiro!`
+            }
+            res.innerHTML += `Você é estrangeiro!`
+        }
+    </script>
+</body>
+</html>
